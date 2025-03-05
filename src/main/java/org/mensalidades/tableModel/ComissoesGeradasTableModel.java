@@ -37,7 +37,7 @@ public class ComissoesGeradasTableModel extends AbstractTableModel {
         return switch (columnIndex) {
             case 0 -> comissao.getId();
             case 1 -> comissao.getInstrutor().getPessoa().getNome();
-            case 2 -> comissao.getMes_referente();
+            case 2 -> comissao.getMesReferente();
             case 3 -> comissao.getValor();
             case 4 -> pago[rowIndex];
             default -> null;

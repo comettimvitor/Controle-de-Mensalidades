@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 public class Comissao {
     private Long id;
-    private int mes_referente;
+    private int mesReferente;
     private BigDecimal valor;
     private boolean pago;
     private Instrutor instrutor;
@@ -19,12 +19,12 @@ public class Comissao {
         this.id = id;
     }
 
-    public int getMes_referente() {
-        return mes_referente;
+    public int getMesReferente() {
+        return mesReferente;
     }
 
-    public void setMes_referente(int mes_referente) {
-        this.mes_referente = mes_referente;
+    public void setMesReferente(int mesReferente) {
+        this.mesReferente = mesReferente;
     }
 
     public BigDecimal getValor() {

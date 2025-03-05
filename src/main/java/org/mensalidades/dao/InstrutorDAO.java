@@ -19,7 +19,7 @@ public class InstrutorDAO {
         String criaPessoa = "INSERT INTO sistema.pessoa(id_endereco, nome, data_nascimento, telefone, cpf) VALUES(?, ?, ?, ?, ?) RETURNING id;";
         int idPessoa = 0;
 
-        String criaInstrutor = "INSERT INTO sistema.instrutor(id_pessoa, inicio_vigencia, comissao) VALUES(?, CURRENT_DATE, ?);";
+        String criaInstrutor = "INSERT INTO sistema.instrutor(id_pessoa, comissao, inicio_vigencia) VALUES(?, ?, CURRENT_DATE);";
 
         try (Connection conn = ConexaoDatabase.getInstancia().getConexao()) {
             conn.setAutoCommit(false);
@@ -61,7 +61,7 @@ public class InstrutorDAO {
 
             try (PreparedStatement statementInstrutor = conn.prepareStatement(criaInstrutor)) {
                 statementInstrutor.setInt(1, idPessoa);
-                statementInstrutor.setInt(3, comissao);
+                statementInstrutor.setInt(2, comissao);
                 statementInstrutor.executeUpdate();
             }
 

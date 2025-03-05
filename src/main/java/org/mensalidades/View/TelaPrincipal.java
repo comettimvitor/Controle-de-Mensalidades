@@ -7,8 +7,6 @@ import org.mensalidades.tableModel.*;
 
 import javax.swing.*;
 import java.awt.*;
-import java.time.Instant;
-import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Date;
@@ -467,7 +465,7 @@ public class TelaPrincipal extends JFrame {
                 .filter(
                         comissao ->
                                 (buscarPorInstrutor.isEmpty() || comissao.getInstrutor().getPessoa().getNome().trim().toLowerCase().contains(buscarPorInstrutor.trim().toLowerCase())) &&
-                                        (comissao.getMes_referente() >= mesInicio && comissao.getMes_referente() <= mesFim) &&
+                                        (comissao.getMesReferente() >= mesInicio && comissao.getMesReferente() <= mesFim) &&
                                         ((!buscaPorAberto && !buscaPorPago || (buscaPorAberto || comissao.isPago()) && (buscaPorPago || !comissao.isPago()))))
                 .collect(Collectors.toList());
 

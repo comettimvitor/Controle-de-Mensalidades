@@ -68,7 +68,7 @@ public class TelaCadastroInstrutor extends JFrame {
 
     private void salvarInstrutor() {
         salvarButton.addActionListener(e -> {
-            if (!textFieldNome.getText().isEmpty() && !formattedTextFieldDataNasc.getText().isEmpty() && !formattedTextFieldTelefone.getText().isEmpty() && !textFieldRua.getText().isEmpty() && !textFieldBairro.getText().isEmpty() && !textFieldNumero.getText().isEmpty() && !formattedTextFieldCep.getText().isEmpty() && !formattedTextFieldCpf.getText().isEmpty()) {
+            if (!textFieldNome.getText().isEmpty() && dateChooserNascimento.getDate() != null && !formattedTextFieldTelefone.getText().isEmpty() && !textFieldRua.getText().isEmpty() && !textFieldBairro.getText().isEmpty() && !textFieldNumero.getText().isEmpty() && !formattedTextFieldCep.getText().isEmpty() && !formattedTextFieldCpf.getText().isEmpty()) {
                 if(editarInstrutor == null){
                     instrutorController.cadastraInstrutor(textFieldRua.getText(), textFieldBairro.getText(), textFieldNumero.getText(), textFieldComplemento.getText(), formattedTextFieldCep.getText(), comboBoxUf.getSelectedItem().toString(), textFieldNome.getText(), formattedTextFieldTelefone.getText().toString(), ConversorData.converteData(dateChooserNascimento.getDate()), formattedTextFieldCpf.getText(), Integer.parseInt(textFieldComissao.getText()));
                     telaPrincipal.populaTabelaInstrutores();

@@ -8,7 +8,7 @@ public class Horario {
     private LocalTime horarioInicio;
     private LocalTime HorarioFim;
     private Date inicioVigencia;
-    private Date fimVIgencia;
+    private Date fimVigencia;
 
     public Horario() {}
 
@@ -44,11 +44,11 @@ public class Horario {
         this.inicioVigencia = inicioVigencia;
     }
 
-    public Date getFimVIgencia() {
-        return fimVIgencia;
+    public Date getFimVigencia() {
+        return fimVigencia;
     }
 
-    public void setFimVIgencia(Date fimVIgencia) {
-        this.fimVIgencia = fimVIgencia;
+    public void setFimVigencia(Date fimVigencia) {
+        this.fimVigencia = fimVigencia;
     }
 }

@@ -4,7 +4,6 @@ import org.mensalidades.Model.*;
 import org.mensalidades.connection.ConexaoDatabase;
 import org.mensalidades.exceptions.DatabaseException;
 
-import java.math.BigDecimal;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -74,7 +73,7 @@ public class MensalidadeDAO {
             PreparedStatement statement = conn.prepareStatement(insereMensalidade)) {
 
             for(Mensalidade mensalidade : listaMensalidades) {
-                statement.setInt(1, mensalidade.getMes_referente());
+                statement.setInt(1, mensalidade.getMesReferente());
                 statement.setDate(2, (Date) mensalidade.getVencimento());
                 statement.setBigDecimal(3, mensalidade.getValor());
                 statement.setLong(4, mensalidade.getTurma().getId());
@@ -115,7 +114,7 @@ public class MensalidadeDAO {
 
                 Mensalidade mensalidade = new Mensalidade();
                 mensalidade.setId(resultSet.getLong("id"));
-                mensalidade.setMes_referente(resultSet.getInt("mes_referente"));
+                mensalidade.setMesReferente(resultSet.getInt("mes_referente"));
                 mensalidade.setVencimento(resultSet.getDate("vencimento"));
                 mensalidade.setValor(resultSet.getBigDecimal("valor"));
                 mensalidade.setPago(resultSet.getBoolean("pago"));

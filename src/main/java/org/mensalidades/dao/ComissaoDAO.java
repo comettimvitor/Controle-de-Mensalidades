@@ -123,7 +123,7 @@ public class ComissaoDAO {
 
                 Comissao comissao = new Comissao();
                 comissao.setId(resultSet.getLong("id"));
-                comissao.setMes_referente(resultSet.getInt("mes_referente"));
+                comissao.setMesReferente(resultSet.getInt("mes_referente"));
                 comissao.setValor(resultSet.getBigDecimal("valor"));
                 comissao.setPago(resultSet.getBoolean("pago"));
                 comissao.setInstrutor(instrutor);

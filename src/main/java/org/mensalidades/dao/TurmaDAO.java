@@ -61,7 +61,7 @@ public class TurmaDAO {
 
         int idModalidade = 0;
 
-        String criaTurma = "INSERT INTO sistema.turma(id_modalidade, id_horario, informacoes, inicio_vigencia, fim_vigencia, id_instrutor) VALUES(?, ?, NULL, CURRENT_DATE, NULL, ?);";
+        String criaTurma = "INSERT INTO sistema.turma(id_modalidade, id_horario, inicio_vigencia, fim_vigencia, id_instrutor) VALUES(?, ?, CURRENT_DATE, NULL, ?);";
 
         try (Connection conn = ConexaoDatabase.getInstancia().getConexao();) {
             conn.setAutoCommit(false);
