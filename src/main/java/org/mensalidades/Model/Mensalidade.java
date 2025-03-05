@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class Mensalidade {
     private Long id;
-    private int mes_referente;
+    private int mesReferente;
     private Date vencimento;
     private BigDecimal valor;
     private boolean pago;
@@ -22,12 +22,12 @@ public class Mensalidade {
         this.id = id;
     }
 
-    public int getMes_referente() {
-        return mes_referente;
+    public int getMesReferente() {
+        return mesReferente;
     }
 
-    public void setMes_referente(int mes_referente) {
-        this.mes_referente = mes_referente;
+    public void setMesReferente(int mesReferente) {
+        this.mesReferente = mesReferente;
     }
 
     public Date getVencimento() {

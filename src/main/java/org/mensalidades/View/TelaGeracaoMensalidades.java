@@ -81,7 +81,7 @@ public class TelaGeracaoMensalidades extends JFrame{
 
         for (int i = 0; i < tableGeracaoMensalidades.getRowCount(); i++) {
             Mensalidade mensalidade = new Mensalidade();
-            mensalidade.setMes_referente(numeroMes);
+            mensalidade.setMesReferente(numeroMes);
             mensalidade.setVencimento(dataVencimento);
 
             Aluno aluno = new Aluno();

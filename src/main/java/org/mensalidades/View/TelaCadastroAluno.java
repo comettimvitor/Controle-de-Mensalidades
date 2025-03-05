@@ -82,7 +82,7 @@ public class TelaCadastroAluno extends JFrame {
 
     private void salvarAluno() {
         salvarButton.addActionListener(e -> {
-            if (!textFieldNome.getText().isEmpty() && !formattedTextFieldDataNasc.getText().isEmpty() && !formattedTextFieldTelefone.getText().isEmpty() && !textFieldRua.getText().isEmpty() && !textFieldBairro.getText().isEmpty() && !textFieldNumero.getText().isEmpty() && !formattedTextFieldCep.getText().isEmpty() && !formattedTextFieldCpf.getText().isEmpty()) {
+            if (!textFieldNome.getText().isEmpty() && dateChooserNascimento.getDate() != null && !formattedTextFieldTelefone.getText().isEmpty() && !textFieldRua.getText().isEmpty() && !textFieldBairro.getText().isEmpty() && !textFieldNumero.getText().isEmpty() && !formattedTextFieldCep.getText().isEmpty() && !formattedTextFieldCpf.getText().isEmpty()) {
 
                 if (!formattedTextFieldDesconto.getText().trim().matches("\\d*")) {
                     JOptionPane.showMessageDialog(null, "Apenas numeros no campo descanso!");
