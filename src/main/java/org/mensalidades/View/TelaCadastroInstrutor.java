@@ -52,6 +52,7 @@ public class TelaCadastroInstrutor extends JFrame {
         Mascaras.mascaraCpf(formattedTextFieldCpf);
         Mascaras.mascaraTelefone(formattedTextFieldTelefone);
 
+
         setTitle("Cadastro de Instrutores");
         add(panelInstrutor);
         setResizable(false);
@@ -61,9 +62,9 @@ public class TelaCadastroInstrutor extends JFrame {
         setVisible(true);
 
         CriaComboBoxEstados.criaComboBoxUfs(comboBoxUf);
+        criaDateChooser();
         salvarInstrutor();
         preencherCamposEdicao();
-        criaDateChooser();
     }
 
     private void salvarInstrutor() {
@@ -76,11 +77,11 @@ public class TelaCadastroInstrutor extends JFrame {
                     instrutorController.editaInstrutor(editarInstrutor.getId(), textFieldRua.getText(), textFieldBairro.getText(), textFieldNumero.getText(), textFieldComplemento.getText(), formattedTextFieldCep.getText(), comboBoxUf.getSelectedItem().toString(), textFieldNome.getText(), formattedTextFieldTelefone.getText().toString(), ConversorData.converteData(dateChooserNascimento.getDate()), formattedTextFieldCpf.getText(), Integer.parseInt(textFieldComissao.getText()));
                     telaPrincipal.populaTabelaInstrutores();
                 }
+
+                this.dispose();
             } else {
                 JOptionPane.showMessageDialog(null, "Preencha todos os campos obrigatorios!");
             }
-
-            this.dispose();
         });
     }
 
